@@ -2,7 +2,7 @@
 PPRINT ("plaunch", "hai.", 2,2).
 
 //STARTSETUP - use launch sanity!
-IF SHIP:SURFACESPEED > 10 AND SHIP:AIRSPEED > 10 {
+IF SHIP:GROUNDSPEED > 10 AND SHIP:AIRSPEED > 10 {
     PPRINT ("plaunch", "You're already flying...                      ", 2,1).
 } ELSE {
 	PPRINT ("plaunch", "Brake. Light. Pitch 22 degrees.                    ", 2,1).
@@ -32,7 +32,7 @@ IF SHIP:SURFACESPEED > 10 AND SHIP:AIRSPEED > 10 {
 	PPRINT ("plaunch", "T-0 Rolling.                       ", 2,2).
 	
 	//LIFTOFF
-	UNTIL SURFACESPEED > 60 AND ALT:RADAR > 100 {
+	UNTIL GROUNDSPEED > 60 AND ALT:RADAR > 100 {
 		PPRINT ("plaunch", "Speeding up.                     ", 2,2).
 	}
 	GEAR ON. GEAR OFF.

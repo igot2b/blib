@@ -6,7 +6,7 @@ PPRINT ("pland", "hai. Approaching ground.                 ", 2,1).
 
 //LANDINGSETUP - use landing sanity!
 UNTIL ALT:RADAR < 40 {
-IF SHIP:SURFACESPEED < 1 AND SHIP:AIRSPEED < 1 {
+IF SHIP:GROUNDSPEED < 1 AND SHIP:AIRSPEED < 1 {
     PPRINT ("pland", "You're already landed...                   ", 2,2).
 } ELSE {
 		WHEN ALT:RADAR < blib_palt_low THEN {
